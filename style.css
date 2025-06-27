@@ -1,0 +1,43 @@
+.px-box {
+  font-size: 20px;
+  width: 200px;
+  background: #ffd6d6;
+  margin-bottom: 12px;
+  padding: 8px;
+}
+
+.em-parent {
+  font-size: 18px;
+  margin-bottom: 12px;
+  background: #d6f7ff;
+  padding: 8px;
+}
+.em-child {
+  font-size: 2em;
+  background: #aeefff;
+  margin-top: 6px;
+  padding: 6px;
+}
+
+html {
+  font-size: 16px;
+}
+.rem-box {
+  font-size: 2rem;
+  background: #d6ffd6;
+  margin-bottom: 12px;
+  padding: 8px;
+}
+
+.percent-parent {
+  width: 400px;
+  background: #fff9d6;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+.percent-child {
+  width: 50%;
+  background: #fff5ae;
+  padding: 6px;
+  margin-top: 6px;
+}

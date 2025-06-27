@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Task 1 -->
+    <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: block; background-color: bisque;">(Boostrap)Task -1 Responsive Navbar</h3>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="font-weight: 500; color: black; font-style: italic;">FITA ACADAMY</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Alumni</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- task2 -->
+        <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: block; background-color: bisque; margin-top: 7px;;">(Boostrap)Task -2 Responsive Cards</h3>
+   <style>
+  .card-img-fixed {
+    height: 200px;           
+    object-fit: cover;       
+  }
+</style>
+
+<div class="container my-4">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="images/fried rice.jpeg" class="card-img-top card-img-fixed" alt="Fried Rice">
+        <div class="card-body">
+          <h5 class="card-title">Fried Rice</h5>
+   <p class="card-text">A Mix of Indian and Chinese <br> <span> price
+              : <span style="color: red;">250</span></span>.</p>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="col">
+      <div class="card h-100">
+        <img src="images/biriyanin.jpeg" class="card-img-top card-img-fixed" alt="Biryani">
+        <div class="card-body">
+          <h5 class="card-title">Biryani</h5>
+        <p class="card-text">A traditional Indian Delight <br> <span> price
+              : <span style="color: red;">300</span></span>.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col">
+      <div class="card h-100">
+        <img src="images/mandi 2.jpeg" class="card-img-top card-img-fixed" alt="Mandi Rice">
+        <div class="card-body">
+          <h5 class="card-title">Mandi Rice</h5>
+          <p class="card-text">A traditional Arabian rice <br> <span> price
+              : <span style="color: red;">500</span></span>.</p>
+          </span>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- task3 -->
+    <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: block; background-color: bisque; margin-top: 7px;;">(Javascript)Task -3 Responsive Cards</h3>
+   
+   <style>
+    .btn{
+        width: 100px;
+        height: 40px;
+    }
+   </style> 
+   <input type="text" id="userInput" placeholder="Enter a string" />
+  <button id="btn" onclick="MostRepeated()">Find</button>
+  <div class="result" id="output"></div>
+
+  <script>
+    function RepeatedChar(str) {
+      if (typeof str !== 'string' || str.length === 0) return null;
+
+      const freq = {};
+      let maxChar = '';
+      let maxCount = 0;
+
+      for (let char of str) {
+        freq[char] = (freq[char] || 0) + 1;
+        if (freq[char] > maxCount) {
+          maxCount = freq[char];
+          maxChar = char;
+        }
+      }
+      return maxChar;
+    }
+
+    function MostRepeated() {
+      const input = document.getElementById('userInput').value;
+      const result = RepeatedChar(input);
+      document.getElementById('output').textContent = 
+        result ? `Most repeated char: "${result}"` : 'Please enter a valid string.';
+    }
+  </script>
+  <!-- task4 -->    
+    <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: block; background-color: bisque; margin-top: 7px;;">(Javascript)Task -4 UniqueElements</h3>
+    <p style="text-align: center; font-size: 40px; font-weight: 600;">Check Console</p>
+    <script>
+        const arr1 = [1, 2, 3 ,5, 6, 7, 8, 9];
+const arr2 = [2, 4, 5, 6, 8, 10];
+
+function findUniqueElements(arr1, arr2) {
+  const uniqueinarr1 = arr1.filter(item => !arr2.includes(item));
+  const uniqueinarr2 = arr2.filter(item => !arr1.includes(item));
+  return uniqueinarr1.concat(uniqueinarr2);
+}
+
+const result = findUniqueElements(arr1, arr2);
+console.log(result); 
+
+    </script>
+    <!-- task5 -->
+       <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: block; background-color: bisque; margin-top: 7px;;">(Javascript)Task -5 LongestWord</h3>
+           <p style="text-align: center; font-size: 40px; font-weight: 600;">Check Console</p>
+       <script>
+        function findLongestWord(sentence) {
+  if (!sentence || typeof sentence !== 'string') return null;
+
+  const words = sentence.split(' ');
+  let longest = '';
+
+  for (let word of words) {
+    if (word.length > longest.length) {
+      longest = word;
+    }
+  }
+  return longest;
+}
+
+const result2 = findLongestWord("JavaScript is powerful");
+console.log(result2); 
+
+       </script>
+
+    <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: block; background-color: bisque; margin-top: 7px;;">(Javascript)Task -6  ChainFunction</h3>
+    <p style="text-align: center; font-size: 40px; font-weight: 600;">Check Console</p>
+
+
+       <script>
+        function chain(value) {
+  return {
+    add: function(num) {
+      value += num;
+      return this;
+    },
+    subtract: function(num) {
+      value -= num;
+      return this;
+    },
+    result: function() {
+      return value;
+    }
+  };
+}
+
+
+const output = chain(5).add(2).subtract(1).result();
+console.log(output); 
+
+       </script>
+        <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: block; background-color: bisque; margin-top: 7px;;">(Javascript)Task -7 Hositing</h3>
+    <p style="text-align: center; font-size: 40px; font-weight: 600;">Check Console</p>
+    <script>
+    console.log(a);    
+var a = 10;
+
+
+
+greet();           
+function greet() {
+  console.log("Hello, world!");
+}
+//console.log(b);     
+//let b = 20;//
+
+    </script>
+
+    <h3 style="text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: block; background-color: bisque; margin-top: 7px;;">(CSS)Task -8 CSS unit</h3>
+
+ <div class="px-box">This box uses px for font-size and width</div>
+
+  <div class="em-parent">
+    Parent font-size 18px
+    <div class="em-child">This child uses 2em (so 36px)</div>
+  </div>
+
+  <div class="rem-box">This box uses rem for font-size</div>
+
+  <div class="percent-parent">
+    Parent width is 400px
+    <div class="percent-child">This child is 50% width (200px)</div>
+  </div>
+
+</body>
+</html>
